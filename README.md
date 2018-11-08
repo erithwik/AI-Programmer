@@ -1,1 +1,3 @@
-# This is a method to make computationally generated code using Genetic Algorithms. 
+# Genetic Programmer
+
+It is a method of making AI based code generation.
