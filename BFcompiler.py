@@ -7,11 +7,9 @@ def solve(code):
 	def addOne():
 		nonlocal data
 		data[pointer] += 1
-
 	def subOne():
 		nonlocal data
 		data[pointer] -= 1
-
 	def moveRight():
 		nonlocal pointer, data
 		pointer += 1
@@ -19,7 +17,6 @@ def solve(code):
 			val = data[pointer]
 		except:
 			data.append(0)
-
 	def moveLeft():
 		nonlocal pointer
 		pointer -= 1
@@ -27,15 +24,12 @@ def solve(code):
 			val = data[pointer]
 		except:
 			pointer += 1
-
 	def printChar():
-		print(data[pointer])
-
+		print(chr(data[pointer]), end = "")
 	def storeVal():
 		nonlocal data
 		val = input("What is the val?")
 		data[pointer] = int(val)
-
 	def startLoop():
 		nonlocal data, pointer, i
 		if data[pointer] == 0:
@@ -46,7 +40,6 @@ def solve(code):
 					braces += 1
 				elif code[i] == ']':
 					braces -= 1
-
 	def endLoop():
 		nonlocal pointer, data, i
 		braces = 1
@@ -65,6 +58,5 @@ def solve(code):
 		keyValDict[code[i]]()
 		i+=1
 
-interpret("bf.txt")
-
-
+if __name__ == "__main__":
+	interpret("bf.txt")
